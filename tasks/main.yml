@@ -1,10 +1,10 @@
 ---
 
-- include: install-redhat.yml
+- include_task: install-redhat.yml
   when: ansible_os_family == 'RedHat'
 
-- include: install-debian.yml
+- include_task: install-debian.yml
   when: ansible_os_family == 'Debian'
 
-- include: virtual-users.yml
+- include_task: virtual-users.yml
   when: vsftpd_enable_virt_users
